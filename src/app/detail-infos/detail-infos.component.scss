@@ -1,0 +1,21 @@
+#sidebarWrapper{
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  button{
+    flex: 1;
+    height: 100%;
+  }
+}
+.detailWrapper{
+  flex: 50;
+  width: 100%;
+  opacity: 0;
+  background-color: #fff;
+}
+
+
+.expanded {
+  opacity: 1;
+}
+

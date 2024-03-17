@@ -1,0 +1,20 @@
+<div id="sidebarWrapper">
+  <button mat-icon-button (click)="close()">
+    <mat-icon>chevron_right</mat-icon>
+  </button>
+  <div class="detailWrapper" [ngClass]="{ expanded: expanded }">
+    <div class="header">
+      <img src="{{ flagImg }}" alt="Keine Flagge verfügbar"/>
+    </div>
+    <div id="content">
+      <h1>
+        {{
+          selectedCountry().countryCode === undefined
+            ? ""
+            : selectedCountry().countryName
+        }}
+      </h1>
+      <div [innerHTML]="selectedCountry().content"></div>
+    </div>
+  </div>
+</div>

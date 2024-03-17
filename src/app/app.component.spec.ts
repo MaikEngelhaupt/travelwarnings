@@ -1,15 +1,21 @@
 import { TestBed } from '@angular/core/testing';
-import { RouterTestingModule } from '@angular/router/testing';
 import { AppComponent } from './app.component';
 
+import { HttpClientTestingModule } from '@angular/common/http/testing';
+import { MapComponent } from './map/map.component';
+import { DetailInfosComponent } from './detail-infos/detail-infos.component';
+import { MatIcon } from '@angular/material/icon';
 describe('AppComponent', () => {
   beforeEach(async () => {
     await TestBed.configureTestingModule({
       imports: [
-        RouterTestingModule
+        HttpClientTestingModule,
+        MatIcon
       ],
       declarations: [
-        AppComponent
+        AppComponent,
+        MapComponent,
+        DetailInfosComponent
       ],
     }).compileComponents();
   });
@@ -26,10 +32,17 @@ describe('AppComponent', () => {
     expect(app.title).toEqual('travelwarnings');
   });
 
-  it('should render title', () => {
+
+  it('should have a app-map', () => {
     const fixture = TestBed.createComponent(AppComponent);
-    fixture.detectChanges();
     const compiled = fixture.nativeElement as HTMLElement;
-    expect(compiled.querySelector('h1')?.textContent).toContain('Hello, travelwarnings');
+    expect(compiled.querySelector('app-map')).toBeTruthy();
   });
+
+  it('should have app-detail-infos', () => {
+    const fixture = TestBed.createComponent(AppComponent);
+    const compiled = fixture.nativeElement as HTMLElement;
+    expect(compiled.querySelector('app-detail-infos')).toBeTruthy();
+  });
+
 });
