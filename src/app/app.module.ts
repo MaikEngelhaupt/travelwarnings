@@ -10,6 +10,8 @@ import { provideAnimationsAsync } from '@angular/platform-browser/animations/asy
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
+import { MatTooltipModule } from '@angular/material/tooltip';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -21,7 +23,8 @@ import { MatIconModule } from '@angular/material/icon';
     AppRoutingModule,
     MatProgressSpinnerModule,
     MatButtonModule,
-    MatIconModule
+    MatIconModule,
+    MatTooltipModule
   ],
   providers: [
     provideAnimationsAsync()

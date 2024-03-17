@@ -6,6 +6,21 @@
     flex: 1;
     height: 100%;
   }
+  .header{
+    display: flex;
+    align-items: center;
+    a{
+      flex: 1;
+      text-align: right;
+      margin: 0;
+      mat-icon{
+        font-size: 2.5em;
+        height: 40px;
+        width: 40px;
+      }
+    }
+
+  }
 }
 .detailWrapper{
   flex: 50;
